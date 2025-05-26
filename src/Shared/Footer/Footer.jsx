@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="p-4 mt-10 text-center border-t border-gray-700">
-        <p>Copyright @ DiscountForge 2021-2013</p>
+        <p>Copyright @ Safe Solution International 2025-2030</p>
       </div>
     </div>
   );
