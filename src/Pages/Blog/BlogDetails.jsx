@@ -5,35 +5,36 @@ const BlogDetails = () => {
   return (
     <div className="">
       <SectionTitle title="Blog Details" />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 p-4 max-w-7xl mx-auto">
         {/* Blog Content */}
         <div className="lg:col-span-2 space-y-8">
           <img
             src="https://castro.jamstacktemplates.dev/assets/img/service/service-details-1.jpg"
             alt="blog"
-            className="w-full h-[400px] object-cover rounded-xl shadow-md"
+            className="w-full h-64 sm:h-80 md:h-[400px] object-cover rounded-xl shadow-md"
           />
-          <div className="text-sm text-gray-500 flex items-center gap-3">
-            <span>By Admin</span> • <FaCalendarAlt /> <span>30 October 2019</span>
+          <div className="text-sm text-gray-500 flex flex-wrap items-center gap-2">
+            <span>By Admin</span>
+            <span className="flex items-center gap-1"><FaCalendarAlt /> 30 October 2019</span>
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
             Smart Work Management: Tools and Techniques for Modern Projects
           </h1>
           <p className="text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt perspiciatis error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores voluptatibus dignissimos ullam mollitia quisquam architecto tenetur enim quasi laborum sequi, placeat beatae maiores facilis eligendi ipsum consectetur dolore eveniet.
           </p>
           <blockquote className="p-5 bg-gray-50 italic border-l-4 border-green-500 text-gray-700 rounded-md shadow-sm">
-            “Smart work is not just about tools, its about choosing the right techniques at the right time. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam est minima laboriosam quam rem, excepturi vel vitae itaque iusto reiciendis voluptates facilis tempore accusantium dicta eveniet, blanditiis autem nisi iste!”
+            “Smart work is not just about tools, it’s about choosing the right techniques at the right time. Lorem ipsum dolor sit amet consectetur, adipisicing elit.”
           </blockquote>
           <p className="text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aliquid quod, officiis unde nostrum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque saepe vitae, sunt quas aperiam itaque! Dolorem aliquam asperiores eaque. Aut doloremque, sed voluptatem vel quidem, alias commodi culpa, suscipit omnis dolorem vero! Ad doloremque eligendi maiores atque esse nihil!.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aliquid quod, officiis unde nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque saepe vitae, sunt quas aperiam itaque! Dolorem aliquam asperiores eaque. Aut doloremque, sed voluptatem vel quidem, alias commodi culpa, suscipit omnis dolorem vero! Ad doloremque eligendi maiores atque esse nihil!
           </p>
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-8">
+        <div className="space-y-10">
           {/* Categories */}
-          <div className="bg-white p-6 rounded-2xl shadow-md">
+          <div className="bg-white p-5 rounded-2xl shadow-md">
             <h2 className="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Categories</h2>
             <ul className="space-y-3">
               {[
@@ -57,7 +58,7 @@ const BlogDetails = () => {
           </div>
 
           {/* Popular Posts */}
-          <div className="bg-white p-6 rounded-2xl shadow-md">
+          <div className="bg-white p-5 rounded-2xl shadow-md">
             <h2 className="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Popular Posts</h2>
             <div className="space-y-5">
               {[1, 2, 3].map((_, idx) => (
@@ -71,7 +72,7 @@ const BlogDetails = () => {
                     alt="Popular"
                   />
                   <div className="text-sm">
-                    <h3 className="font-semibold text-gray-800">
+                    <h3 className="font-semibold text-gray-800 leading-tight">
                       Tools and Techniques for Modern Projects
                     </h3>
                     <p className="text-xs text-gray-500 flex items-center gap-1">

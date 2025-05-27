@@ -96,35 +96,37 @@ const Blog = () => {
   ];
 
   return (
-    <div>
+    <div className="">
       <SectionTitle title="Blog" />
-      <div className="grid grid-cols-3 gap-4 p-5 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-4 max-w-7xl mx-auto">
         {blogData.map((blog) => (
           <div
             key={blog.id}
-            className="group overflow-hidden p-1 relative transition-all duration-300"
+            className="group overflow-hidden rounded-lg bg-white shadow hover:shadow-lg transition-all duration-300"
           >
             {/* Image with overlay */}
-            <div className="relative overflow-hidden">
+            <div className="relative">
               <img
                 src={blog.image}
                 alt={blog.blog}
-                className="w-full h-auto transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 group-hover:bg-black/20 transition duration-500 group-hover:scale-105"></div>
             </div>
 
             {/* Text */}
-            <div className="py-3 space-y-3">
-                <p className="text-gray-500 font-bold">{blog.date}</p>
-              <Link to="/blog_details" className="text-2xl font-bold hover:text-green-600">
-                {blog.blog}
-              </Link>
-              <p>{blog.description}</p>
+            <div className="p-5 space-y-3 bg-white">
+              <p className="text-gray-500 font-semibold text-sm">{blog.date}</p>
               <Link
                 to="/blog_details"
-                className="font-bold underline uppercase group-hover:text-green-600 transition-colors duration-300"
+                className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-green-600 transition-colors"
+              >
+                {blog.blog}
+              </Link>
+              <p className="text-gray-600">{blog.description}</p>
+              <Link
+                to="/blog_details"
+                className="font-semibold text-green-700 uppercase text-sm hover:underline"
               >
                 See More
               </Link>
