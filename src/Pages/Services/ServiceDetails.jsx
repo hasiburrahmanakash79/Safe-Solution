@@ -7,31 +7,17 @@ import {
   FaPaintRoller,
   FaWrench,
   FaCity,
+  FaChevronLeft,
+  FaChevronRight,
 } from "react-icons/fa";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SectionTitle from "../../components/SectionTitle";
 
 const imagesData = [
-  {
-    id: 1,
-    url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-1.jpg",
-  },
-  {
-    id: 2,
-    url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-2.jpg",
-  },
-  {
-    id: 3,
-    url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-3.jpg",
-  },
-  {
-    id: 4,
-    url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-4.jpg",
-  },
-  {
-    id: 5,
-    url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-5.jpg",
-  },
+  { id: 1, url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-1.jpg" },
+  { id: 2, url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-2.jpg" },
+  { id: 3, url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-3.jpg" },
+  { id: 4, url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-4.jpg" },
+  { id: 5, url: "https://castro.jamstacktemplates.dev/assets/img/service/service-details-5.jpg" },
 ];
 
 const ServiceDetails = () => {
@@ -49,116 +35,83 @@ const ServiceDetails = () => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="">
       <SectionTitle title="Service Details" />
-      <div className="grid grid-cols-3 gap-5 py-7 max-w-7xl mx-auto">
-        <div className="col-span-1">
-          <div className="bg-base-200 p-5 ">
-            <h1 className="text-lg font-bold pb-5">Services</h1>
-            <ul className="space-y-3">
-              <li className="border-b border-gray-200 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaHardHat /> General Construction
-              </li>
-              <li className="border-b border-gray-200 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaTools /> Equipment Installation
-              </li>
-              <li className="border-b border-gray-200 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaTruckMoving /> Material Transport
-              </li>
-              <li className="border-b border-gray-200 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaDraftingCompass /> Architectural Design
-              </li>
-              <li className="border-b border-gray-200 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaPaintRoller /> Painting & Finishing
-              </li>
-              <li className="border-b border-gray-200 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaWrench /> Plumbing Services
-              </li>
-              <li className="p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
-                <FaCity /> Urban Development
-              </li>
-            </ul>
-          </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto p-4">
+        {/* Sidebar */}
+        <div className="bg-base-200 p-5 rounded-lg">
+          <h2 className="text-lg font-bold pb-5">Services</h2>
+          <ul className="space-y-3 text-sm">
+            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaHardHat /> General Construction
+            </li>
+            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaTools /> Equipment Installation
+            </li>
+            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaTruckMoving /> Material Transport
+            </li>
+            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaDraftingCompass /> Architectural Design
+            </li>
+            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaPaintRoller /> Painting & Finishing
+            </li>
+            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaWrench /> Plumbing Services
+            </li>
+            <li className="p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+              <FaCity /> Urban Development
+            </li>
+          </ul>
         </div>
-        <div className="col-span-2">
-          <div className="space-y-5">
-            <div className="relative w-full max-w-4xl mx-auto overflow-hidden group">
-              {/* Image */}
-              <img
-                src={imagesData[current].url}
-                alt={`Slide ${current + 1}`}
-                className="w-full h-[400px] object-cover transition duration-700 ease-in-out"
-              />
 
-              {/* Left Button (hidden by default, visible on hover) */}
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-green-600 text-white p-4 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <FaChevronLeft />
-              </button>
+        {/* Main Content */}
+        <div className="md:col-span-2 space-y-6">
+          {/* Image Carousel */}
+          <div className="relative w-full overflow-hidden group rounded-lg">
+            <img
+              src={imagesData[current].url}
+              alt={`Slide ${current + 1}`}
+              className="w-full h-[250px] md:h-[400px] object-cover transition duration-700 ease-in-out"
+            />
 
-              {/* Right Button */}
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-green-600 text-white p-4 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
-              >
-                <FaChevronRight />
-              </button>
-            </div>
+            <button
+              onClick={prevSlide}
+              className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full opacity-70 hover:opacity-100 transition"
+            >
+              <FaChevronLeft />
+            </button>
 
-            <h1 className="text-5xl font-bold">Construction</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
-              sunt perspiciatis error id ipsa atque unde quis dolore nobis eum
-              aperiam enim blanditiis pariatur inventore eius commodi
-              consectetur ut. Totam, assumenda! Laboriosam possimus, corporis
-              dicta!
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Asperiores aliquid quod, officiis unde nostrum itaque! Adipisci
-              dolorum, ab dolor, exercitationem praesentium dolorem quo
-              voluptatum itaque dignissimos, sit esse cupiditate. Doloremque
-              rerum similique a nobis placeat in illum, quo quaerat, ut
-              repellat, fuga itaque? Nihil mollitia nisi, nam, accusantium nemo
-              consequuntur reiciendis autem dicta consequatur earum beatae dolor
-              distinctio, debitis repudiandae?
+            <button
+              onClick={nextSlide}
+              className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full opacity-70 hover:opacity-100 transition"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+
+          {/* Description */}
+          <div className="space-y-4">
+            <h1 className="text-3xl md:text-5xl font-bold">Construction</h1>
+            <p className="text-gray-700 leading-relaxed text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt perspiciatis error id ipsa atque unde quis dolore nobis eum aperiam enim blanditiis pariatur inventore eius commodi consectetur ut. Totam, assumenda!
+              <br /><br />
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aliquid quod, officiis unde nostrum itaque! Adipisci dolorum, ab dolor, exercitationem praesentium dolorem quo voluptatum itaque dignissimos.
             </p>
-            <div className="grid grid-cols-2 gap-5">
-              <div>
-                <h1 className="text-xl font-bold">Lorem, ipsum dolor.</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore exercitationem omnis cum veritatis sit ducimus
-                  mollitia sunt possimus facere nulla.
-                </p>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold">Lorem, ipsum dolor.</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore exercitationem omnis cum veritatis sit ducimus
-                  mollitia sunt possimus facere nulla.
-                </p>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold">Lorem, ipsum dolor.</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore exercitationem omnis cum veritatis sit ducimus
-                  mollitia sunt possimus facere nulla.
-                </p>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold">Lorem, ipsum dolor.</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Inventore exercitationem omnis cum veritatis sit ducimus
-                  mollitia sunt possimus facere nulla.
-                </p>
-              </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-3">
+              {Array(4).fill(0).map((_, idx) => (
+                <div key={idx}>
+                  <h2 className="text-xl font-bold mb-1">Lorem, ipsum dolor.</h2>
+                  <p className="text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore exercitationem omnis cum veritatis sit ducimus.
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

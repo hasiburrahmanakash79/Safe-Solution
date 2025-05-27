@@ -10,8 +10,8 @@ const AboutUs = () => {
   const [clientCount, setClientCount] = useState(0);
 
   useEffect(() => {
-    const duration = 2000; // 3 seconds
-    const steps = 60; // Number of updates
+    const duration = 2000;
+    const steps = 60;
     const interval = duration / steps;
 
     const animateCount = (target, setter) => {
@@ -41,110 +41,91 @@ const AboutUs = () => {
   return (
     <div>
       <SectionTitle title="About Us" />
-      {/* Main Content */}
-      <div className="py-16 px-4  max-w-7xl mx-auto">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
-            <div className="relative">
-              {!isVideoPlaying ? (
-                <>
-                  <img
-                    src="https://castro.jamstacktemplates.dev/assets/img/about/about-3.jpg"
-                    alt="Construction equipment"
-                    width={600}
-                    height={500}
-                    className="w-full h-auto rounded-md"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-green-500 transition-colors group">
-                      <button
-                        onClick={handlePlayVideo}
-                        className="text-green-500 group-hover:text-white ml-1"
-                      >
-                        ▶
-                      </button>
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <video
-                  src="/your-video-file.mp4"
-                  controls
-                  autoPlay
-                  className="w-full h-auto rounded-md"
+
+      {/* Main Section */}
+      <section className="py-16 px-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Video / Image */}
+          <div className="relative">
+            {!isVideoPlaying ? (
+              <>
+                <img
+                  src="https://castro.jamstacktemplates.dev/assets/img/about/about-3.jpg"
+                  alt="About us"
+                  className="w-full h-auto rounded-md shadow-lg"
                 />
-              )}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <button
+                    onClick={handlePlayVideo}
+                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center hover:bg-green-500 transition-colors group"
+                  >
+                    <span className="text-green-500 group-hover:text-white text-2xl">▶</span>
+                  </button>
+                </div>
+              </>
+            ) : (
+              <video
+                src="/your-video-file.mp4"
+                controls
+                autoPlay
+                className="w-full h-auto rounded-md"
+              />
+            )}
+          </div>
+
+          {/* Text Content */}
+          <div>
+            <h3 className="text-green-500 font-medium mb-2">Welcome to Safe Solution International</h3>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">50 Years of Experience in Industry</h2>
+            <p className="text-gray-700 mb-4 font-medium">
+              We are ready to build your dream home. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae odit dolorum quis
+              laudantium impedit beatae perferendis natus, hic libero sed atque quibusdam possimus error.
+            </p>
+            <Link
+              to="/services"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded font-medium transition"
+            >
+              OUR SERVICES
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Counter Section */}
+      <section
+        className="bg-fixed bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://t4.ftcdn.net/jpg/08/13/43/03/360_F_813430325_TXrckwQPj9GpiuCaYn2YM4P7v0h3OccK.jpg')`,
+        }}
+      >
+        <div className="bg-black/60 py-20">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-white text-center">
+            <div className="flex flex-col items-center">
+              <FcHome className="text-6xl mb-3" />
+              <h3 className="text-3xl font-bold">+{projectCount}</h3>
+              <p className="uppercase text-lg mt-1">Projects</p>
             </div>
-
-            <div>
-              <h3 className="text-green-500  font-medium mb-2">
-                Welcome to Safe solution international
-              </h3>
-              <h2 className="text-3xl font-bold mb-6">
-                50 Years of Experience in Industry
-              </h2>
-
-              <p className="text-gray-700 mb-6 font-medium">
-                We are ready to build your dream home Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Dolorum, beatae.
-              </p>
-
-              <p className="text-gray-600 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
-                repudiandae odit dolorum quis laudantium impedit beatae
-                perferendis natus, hic libero sed atque quibusdam possimus
-                error, voluptate est molestiae doloremque necessitatibus illum
-                rerum sunt! Ad sunt obcaecati voluptatem sint sequi quos, qui
-                non deleniti a praesentium, sapiente accusantium odit.
-              </p>
-
-              <Link
-                href="#"
-                className="inline-block bg-green-500 hover:bg-green-600 rounded text-white px-6 py-3 font-medium transition-colors"
-              >
-                OUR SERVICES
-              </Link>
+            <div className="flex flex-col items-center">
+              <FcBusinessman className="text-6xl mb-3" />
+              <h3 className="text-3xl font-bold">+{clientCount}</h3>
+              <p className="uppercase text-lg mt-1">Clients</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FcStatistics className="text-6xl mb-3" />
+              <h3 className="text-3xl font-bold">+{employeeCount}</h3>
+              <p className="uppercase text-lg mt-1">Success</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <FcRating className="text-6xl mb-3" />
+              <h3 className="text-3xl font-bold">+50</h3>
+              <p className="uppercase text-lg mt-1">Awards</p>
             </div>
           </div>
         </div>
-      </div>
-
-      <div>
-        <div className="w-full bg-[url('https://t4.ftcdn.net/jpg/08/13/43/03/360_F_813430325_TXrckwQPj9GpiuCaYn2YM4P7v0h3OccK.jpg')] bg-fixed bg-no-repeat bg-cover">
-          <div className="bg-black/60 text-white h-full ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-20 max-w-7xl mx-auto">
-              <div className="flex flex-col items-center justify-center">
-              <FcHome  className="text-7xl" />
-                <h1 className="text-3xl md:text-4xl py-4 font-bold">
-                  +{employeeCount}
-                </h1>
-                <p className="text-lg md:text-lg uppercase ">Projects</p>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-              <FcBusinessman className="text-7xl" />
-                <h1 className="text-3xl md:text-4xl py-4 font-bold">
-                  +{projectCount}
-                </h1>
-                <p className="text-lg md:text-lg uppercase ">Clients</p>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-              <FcStatistics className="text-7xl"/>
-                <h1 className="text-3xl md:text-4xl py-4 font-bold">
-                  +{clientCount}
-                </h1>
-                <p className="text-lg md:text-lg uppercase ">success</p>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-              <FcRating className="text-7xl" />
-                <h1 className="text-3xl md:text-4xl py-4 font-bold">
-                  +{clientCount}
-                </h1>
-                <p className="text-lg md:text-lg uppercase ">Awards</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

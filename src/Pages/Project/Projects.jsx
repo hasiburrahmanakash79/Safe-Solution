@@ -88,7 +88,7 @@ const Projects = () => {
     return (
       <div>
         <SectionTitle title="Our Projects" />
-        <div className="grid grid-cols-3 gap-4 p-5 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 p-4 max-w-7xl mx-auto">
           {projectsData.map((project) => (
             <div
               key={project.id}

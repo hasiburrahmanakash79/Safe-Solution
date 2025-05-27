@@ -6,14 +6,13 @@ const About = () => {
     const [clientCount, setClientCount] = useState(0);
 
     useEffect(() => {
-        const duration = 2000; // 3 seconds
-        const steps = 60; // Number of updates
+        const duration = 2000;
+        const steps = 60;
         const interval = duration / steps;
 
         const animateCount = (target, setter) => {
             let current = 0;
             const increment = target / steps;
-
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
@@ -31,37 +30,46 @@ const About = () => {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 items-center min-h-[50vh] gap-5 p-5 max-w-7xl mx-auto">
-            <div className="md:col-span-1 text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                    About Us
-                </h1>
-            </div>
-            <div className="md:col-span-2">
-                <p className="text-xl md:text-3xl text-center md:text-left">
-                    Through our large capacity we dare to say we are different.
-                </p>
-                <div className="mt-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        <div className="flex flex-col items-center justify-center">
-                            <h1 className="text-3xl md:text-4xl font-bold">+{employeeCount}</h1>
-                            <div className="h-2 w-14 mx-auto bg-green-500 rounded-full my-5"></div>
-                            <p className="text-lg md:text-xl uppercase">Employee</p>
+        <section className="px-4 sm:px-6 md:px-10 lg:px-20 py-16 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                {/* Title Section */}
+                <div className="text-center md:text-left">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                        About Us
+                    </h1>
+                </div>
+
+                {/* Description & Counters */}
+                <div className="md:col-span-2 space-y-10">
+                    <p className="text-lg sm:text-xl md:text-2xl text-center md:text-left">
+                        Through our large capacity, we dare to say we are different. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, modi?
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Employee */}
+                        <div className="flex flex-col items-center text-center">
+                            <h1 className="text-3xl sm:text-4xl font-bold">+{employeeCount}</h1>
+                            <div className="h-2 w-14 bg-green-500 rounded-full my-4"></div>
+                            <p className="text-base sm:text-lg md:text-xl uppercase">Employee</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center">
-                            <h1 className="text-3xl md:text-4xl font-bold">+{projectCount}</h1>
-                            <div className="h-2 w-14 mx-auto bg-green-500 rounded-full my-5"></div>
-                            <p className="text-lg md:text-xl uppercase">Projects</p>
+
+                        {/* Projects */}
+                        <div className="flex flex-col items-center text-center">
+                            <h1 className="text-3xl sm:text-4xl font-bold">+{projectCount}</h1>
+                            <div className="h-2 w-14 bg-green-500 rounded-full my-4"></div>
+                            <p className="text-base sm:text-lg md:text-xl uppercase">Projects</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center">
-                            <h1 className="text-3xl md:text-4xl font-bold">+{clientCount}</h1>
-                            <div className="h-2 w-14 mx-auto bg-green-500 rounded-full my-5"></div>
-                            <p className="text-lg md:text-xl uppercase">Clients</p>
+
+                        {/* Clients */}
+                        <div className="flex flex-col items-center text-center">
+                            <h1 className="text-3xl sm:text-4xl font-bold">+{clientCount}</h1>
+                            <div className="h-2 w-14 bg-green-500 rounded-full my-4"></div>
+                            <p className="text-base sm:text-lg md:text-xl uppercase">Clients</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

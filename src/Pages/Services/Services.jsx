@@ -99,7 +99,7 @@ const Services = () => {
   return (
     <div>
       <SectionTitle title="Our Services" />
-      <div className="grid grid-cols-3 gap-4 p-5 max-w-7xl mx-auto">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 p-5 max-w-7xl mx-auto">
         {servicesData.map((service) => (
           <div
             key={service.id}
