@@ -116,7 +116,7 @@ export default function Navbar() {
                 key={item.name}
                 to={item.path}
                 onClick={handleLinkClick}
-                className="text-gray-800 font-semibold text-base hover:text-green-500"
+                className="text-gray-800 font-semibold text-center text-sm hover:text-green-500 border-b border-gray-100 w-full"
               >
                 {item.name}
               </Link>

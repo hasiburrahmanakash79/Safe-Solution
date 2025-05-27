@@ -52,7 +52,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white px-6 py-16 flex flex-col items-center  max-w-7xl mx-auto">
+    <div className="min-h-screen bg-white px-4 py-16 flex flex-col items-center  max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-4">Say Hello to Us</h2>
       <p className="text-center max-w-xl mb-12 text-gray-700">
         Do you have any questions? Are you ready to reduce cost and create new revenue? Or you simply want to say hi? Drop us a message.
