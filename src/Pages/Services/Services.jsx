@@ -115,7 +115,7 @@ const Services = () => {
             </div>
 
             {/* Icon */}
-            <div className="w-20 h-20 bg-slate-700 group-hover:bg-green-600 text-white flex items-center justify-center text-4xl -mt-10 z-10 ms-5 relative transition-colors duration-300">
+            <div className="w-20 h-20 bg-slate-700 group-hover:bg-red-500 text-white flex items-center justify-center text-4xl -mt-10 z-10 ms-5 relative transition-colors duration-300">
               {service.icon}
             </div>
 
@@ -123,7 +123,7 @@ const Services = () => {
             <div className="py-3 space-y-3">
               <h1 className="text-2xl font-bold">{service.title}</h1>
               <p>{service.description}</p>
-              <Link to='/service_details' className="font-bold underline uppercase group-hover:text-green-600 transition-colors duration-300">
+              <Link to='/service_details' className="font-bold underline uppercase group-hover:text-red-500 transition-colors duration-300">
                 See More
               </Link>
             </div>

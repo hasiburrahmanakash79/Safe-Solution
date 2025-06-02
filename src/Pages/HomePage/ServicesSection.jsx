@@ -30,9 +30,9 @@ export default function ServicesSection() {
     <section className="bg-blue-50 py-16 px-4 sm:px-6 lg:px-24">
       <div className=" max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-10 gap-4">
-          <h2 className="text-3xl font-bold text-blue-800 text-center sm:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-500">
             Our Services
-          </h2>
+          </h1>
           <a
             href="#"
             className="text-blue-500 font-semibold hover:underline flex items-center gap-1"

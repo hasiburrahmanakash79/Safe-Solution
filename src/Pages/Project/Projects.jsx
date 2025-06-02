@@ -106,7 +106,7 @@ const Projects = () => {
               <div className="py-3 space-y-3">
                 <h1 className="text-2xl font-bold">{project.title}</h1>
                 <p>{project.description}</p>
-                <Link to='/project_details' className="font-bold underline uppercase group-hover:text-green-600 transition-colors duration-300">
+                <Link to='/project_details' className="font-bold underline uppercase group-hover:text-red-500 transition-colors duration-300">
                   See More
                 </Link>
               </div>

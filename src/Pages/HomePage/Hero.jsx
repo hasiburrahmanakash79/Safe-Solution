@@ -23,7 +23,7 @@ const Hero = () => {
             pariatur consequatur itaque? Praesentium itaque neque nulla provident at,
           </p>
           <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
-            <button className="px-10 py-2 border border-green-500 text-green-500 rounded hover:bg-green-500 hover:text-white">
+            <button className="px-10 py-2 border bg-red-500/50 border-red-500  rounded hover:bg-red-500 text-white transform duration-500 hover:scale-105">
               See Detail
             </button>
           </div>

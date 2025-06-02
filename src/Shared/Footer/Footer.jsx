@@ -17,16 +17,16 @@ const Footer = () => {
             </p>
             <p className="mb-3 text-sm">Follow us on social media:</p>
             <div className="flex items-center space-x-4 text-xl">
-              <a href="#" aria-label="Instagram" className="hover:text-green-500 transition">
+              <a href="#" aria-label="Instagram" className="hover:text-red-500 transition">
                 <FaInstagram />
               </a>
-              <a href="#" aria-label="Facebook" className="hover:text-green-500 transition">
+              <a href="#" aria-label="Facebook" className="hover:text-red-500 transition">
                 <FaFacebook />
               </a>
-              <a href="#" aria-label="YouTube" className="hover:text-green-500 transition">
+              <a href="#" aria-label="YouTube" className="hover:text-red-500 transition">
                 <FaYoutube />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-green-500 transition">
+              <a href="#" aria-label="LinkedIn" className="hover:text-red-500 transition">
                 <FaLinkedin />
               </a>
             </div>
@@ -40,7 +40,7 @@ const Footer = () => {
               <ul className="space-y-2 text-gray-400 text-sm">
                 {["Wrench", "Hammer", "Axe", "Pliers"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="hover:text-green-600 transition">{item}</a>
+                    <a href="#" className="hover:text-red-500 transition">{item}</a>
                   </li>
                 ))}
               </ul>
@@ -52,7 +52,7 @@ const Footer = () => {
               <ul className="space-y-2 text-gray-400 text-sm">
                 {["Tools", "Electronics", "Home & Garden", "Fashion"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="hover:text-green-600 transition">{item}</a>
+                    <a href="#" className="hover:text-red-500 transition">{item}</a>
                   </li>
                 ))}
               </ul>
@@ -64,7 +64,7 @@ const Footer = () => {
               <ul className="space-y-2 text-gray-400 text-sm">
                 {["Shipping & Returns", "Privacy Policy", "Terms of Service"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="hover:text-green-600 transition">{item}</a>
+                    <a href="#" className="hover:text-red-500 transition">{item}</a>
                   </li>
                 ))}
               </ul>

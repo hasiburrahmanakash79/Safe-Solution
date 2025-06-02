@@ -119,14 +119,14 @@ const Blog = () => {
               <p className="text-gray-500 font-semibold text-sm">{blog.date}</p>
               <Link
                 to="/blog_details"
-                className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-green-600 transition-colors"
+                className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-red-500 transition-colors"
               >
                 {blog.blog}
               </Link>
               <p className="text-gray-600">{blog.description}</p>
               <Link
                 to="/blog_details"
-                className="font-semibold text-green-700 uppercase text-sm hover:underline"
+                className="font-semibold text-red-700 uppercase text-sm hover:underline"
               >
                 See More
               </Link>

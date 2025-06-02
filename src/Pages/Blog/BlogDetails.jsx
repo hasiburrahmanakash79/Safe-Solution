@@ -23,7 +23,7 @@ const BlogDetails = () => {
           <p className="text-gray-700 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt perspiciatis error. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse asperiores voluptatibus dignissimos ullam mollitia quisquam architecto tenetur enim quasi laborum sequi, placeat beatae maiores facilis eligendi ipsum consectetur dolore eveniet.
           </p>
-          <blockquote className="p-5 bg-gray-50 italic border-l-4 border-green-500 text-gray-700 rounded-md shadow-sm">
+          <blockquote className="p-5 bg-gray-50 italic border-l-4 border-red-500 text-gray-700 rounded-md shadow-sm">
             “Smart work is not just about tools, it’s about choosing the right techniques at the right time. Lorem ipsum dolor sit amet consectetur, adipisicing elit.”
           </blockquote>
           <p className="text-gray-700 leading-relaxed">
@@ -48,9 +48,9 @@ const BlogDetails = () => {
               ].map((category, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 text-gray-700 hover:text-green-600 cursor-pointer transition"
+                  className="flex items-center gap-2 text-gray-700 hover:text-red-500 cursor-pointer transition"
                 >
-                  <FaTags className="text-green-500" />
+                  <FaTags className="text-red-500" />
                   {category}
                 </li>
               ))}

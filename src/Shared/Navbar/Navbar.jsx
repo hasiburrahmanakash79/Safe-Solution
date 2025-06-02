@@ -53,8 +53,8 @@ export default function Navbar() {
         {/* Contact Info */}
         <div className="flex space-x-8">
           <div className="flex items-center space-x-2">
-            <div className="border border-green-500 rounded-full p-2">
-              <FaPhone className="text-green-500" />
+            <div className="border border-red-500 rounded-full p-2">
+              <FaPhone className="text-red-500" />
             </div>
             <div>
               <p className="text-sm font-semibold">Phone</p>
@@ -63,8 +63,8 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-2">
-            <div className="border border-green-500 rounded-full p-2">
-              <FaHome className="text-green-500" />
+            <div className="border border-red-500 rounded-full p-2">
+              <FaHome className="text-red-500" />
             </div>
             <div>
               <p className="text-sm font-semibold">Address</p>
@@ -79,7 +79,7 @@ export default function Navbar() {
         <img src="https://images.seeklogo.com/logo-png/48/2/scuba-scholl-international-logo-png_seeklogo-483233.png" alt="Logo" className="w-10 h-10" />
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="text-2xl text-green-600 focus:outline-none"
+          className="text-2xl text-red-500 focus:outline-none"
         >
           {menuOpen ? <RiCloseFill /> : <RiAlignRight />}
         </button>
@@ -87,7 +87,7 @@ export default function Navbar() {
 
       {/* Desktop Navbar */}
       <nav
-        className={`hidden md:flex bg-green-500 transition-all duration-700 ${
+        className={`hidden md:flex bg-red-500 transition-all duration-700 ${
           isScrolled
             ? "fixed top-0 py-4 w-full justify-center"
             : "relative py-2"
@@ -116,7 +116,7 @@ export default function Navbar() {
                 key={item.name}
                 to={item.path}
                 onClick={handleLinkClick}
-                className="text-gray-800 font-semibold text-center text-sm hover:text-green-500 border-b border-gray-100 w-full"
+                className="text-gray-800 font-semibold text-center text-sm hover:text-red-500 border-b border-gray-100 w-full"
               >
                 {item.name}
               </Link>

@@ -34,7 +34,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 {/* Title Section */}
                 <div className="text-center md:text-left">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-500">
                         About Us
                     </h1>
                 </div>
@@ -49,21 +49,21 @@ const About = () => {
                         {/* Employee */}
                         <div className="flex flex-col items-center text-center">
                             <h1 className="text-3xl sm:text-4xl font-bold">+{employeeCount}</h1>
-                            <div className="h-2 w-14 bg-green-500 rounded-full my-4"></div>
+                            <div className="h-2 w-14 bg-red-500 rounded-full my-4"></div>
                             <p className="text-base sm:text-lg md:text-xl uppercase">Employee</p>
                         </div>
 
                         {/* Projects */}
                         <div className="flex flex-col items-center text-center">
                             <h1 className="text-3xl sm:text-4xl font-bold">+{projectCount}</h1>
-                            <div className="h-2 w-14 bg-green-500 rounded-full my-4"></div>
+                            <div className="h-2 w-14 bg-red-500 rounded-full my-4"></div>
                             <p className="text-base sm:text-lg md:text-xl uppercase">Projects</p>
                         </div>
 
                         {/* Clients */}
                         <div className="flex flex-col items-center text-center">
                             <h1 className="text-3xl sm:text-4xl font-bold">+{clientCount}</h1>
-                            <div className="h-2 w-14 bg-green-500 rounded-full my-4"></div>
+                            <div className="h-2 w-14 bg-red-500 rounded-full my-4"></div>
                             <p className="text-base sm:text-lg md:text-xl uppercase">Clients</p>
                         </div>
                     </div>

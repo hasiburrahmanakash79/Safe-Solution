@@ -45,25 +45,25 @@ const ServiceDetails = () => {
         <div className="bg-base-200 p-5 rounded-lg">
           <h2 className="text-lg font-bold pb-5">Services</h2>
           <ul className="space-y-3 text-sm">
-            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="border-b border-gray-300 p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaHardHat /> General Construction
             </li>
-            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="border-b border-gray-300 p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaTools /> Equipment Installation
             </li>
-            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="border-b border-gray-300 p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaTruckMoving /> Material Transport
             </li>
-            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="border-b border-gray-300 p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaDraftingCompass /> Architectural Design
             </li>
-            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="border-b border-gray-300 p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaPaintRoller /> Painting & Finishing
             </li>
-            <li className="border-b border-gray-300 p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="border-b border-gray-300 p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaWrench /> Plumbing Services
             </li>
-            <li className="p-2 hover:text-green-500 cursor-pointer flex items-center gap-2">
+            <li className="p-2 hover:text-red-500 cursor-pointer flex items-center gap-2">
               <FaCity /> Urban Development
             </li>
           </ul>
@@ -81,14 +81,14 @@ const ServiceDetails = () => {
 
             <button
               onClick={prevSlide}
-              className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full opacity-70 hover:opacity-100 transition"
+              className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full opacity-70 hover:opacity-100 transition"
             >
               <FaChevronLeft />
             </button>
 
             <button
               onClick={nextSlide}
-              className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-green-600 text-white p-3 rounded-full opacity-70 hover:opacity-100 transition"
+              className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-red-500 text-white p-3 rounded-full opacity-70 hover:opacity-100 transition"
             >
               <FaChevronRight />
             </button>

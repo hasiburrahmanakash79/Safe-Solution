@@ -77,12 +77,12 @@ const ContactPage = () => {
               onChange={handleChange}
               placeholder=" "
               className={`peer w-full border-b-2 py-2 text-gray-700 placeholder-transparent focus:outline-none ${
-                errors[field.name] ? "border-red-500" : "border-gray-300 focus:border-green-500"
+                errors[field.name] ? "border-red-500" : "border-gray-300 focus:border-red-500"
               }`}
             />
             <label
               htmlFor={field.name}
-              className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-green-600"
+              className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-red-500"
             >
               {field.label}
             </label>
@@ -102,12 +102,12 @@ const ContactPage = () => {
             onChange={handleChange}
             placeholder=" "
             className={`peer w-full border-b-2 py-2 text-gray-700 placeholder-transparent focus:outline-none ${
-              errors.message ? "border-red-500" : "border-gray-300 focus:border-green-500"
+              errors.message ? "border-red-500" : "border-gray-300 focus:border-red-500"
             }`}
           ></textarea>
           <label
             htmlFor="message"
-            className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-green-600"
+            className="absolute left-0 -top-3.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-red-500"
           >
             Write your message here
           </label>
@@ -135,7 +135,7 @@ const ContactPage = () => {
 
           <button
             type="submit"
-            className="mt-2 md:mt-0 bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition-colors"
+            className="mt-2 md:mt-0 bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-700 transition-colors"
           >
             SEND MESSAGE
           </button>

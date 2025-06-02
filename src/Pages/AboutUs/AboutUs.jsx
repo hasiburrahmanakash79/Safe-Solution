@@ -57,9 +57,9 @@ const AboutUs = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button
                     onClick={handlePlayVideo}
-                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center hover:bg-green-500 transition-colors group"
+                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center hover:bg-red-500 transition-colors group"
                   >
-                    <span className="text-green-500 group-hover:text-white text-2xl">▶</span>
+                    <span className="text-red-500 group-hover:text-white text-2xl">▶</span>
                   </button>
                 </div>
               </>
@@ -75,7 +75,7 @@ const AboutUs = () => {
 
           {/* Text Content */}
           <div>
-            <h3 className="text-green-500 font-medium mb-2">Welcome to Safe Solution International</h3>
+            <h3 className="text-red-500 font-medium mb-2">Welcome to Safe Solution International</h3>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">50 Years of Experience in Industry</h2>
             <p className="text-gray-700 mb-4 font-medium">
               We are ready to build your dream home. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -86,7 +86,7 @@ const AboutUs = () => {
             </p>
             <Link
               to="/services"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded font-medium transition"
+              className="inline-block bg-red-500 hover:bg-red-500 text-white px-6 py-3 rounded font-medium transition"
             >
               OUR SERVICES
             </Link>
