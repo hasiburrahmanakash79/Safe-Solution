@@ -30,12 +30,12 @@ export default function ServicesSection() {
     <section className="bg-blue-50 py-16 px-4 sm:px-6 lg:px-24">
       <div className=" max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-10 gap-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-500">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500">
             Our Services
           </h1>
           <a
             href="#"
-            className="text-blue-500 font-semibold hover:underline flex items-center gap-1"
+            className="text-red-500 font-semibold hover:underline flex items-center gap-1"
           >
             SEE ALL →
           </a>
@@ -54,7 +54,7 @@ export default function ServicesSection() {
               />
               <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600 mb-4">{service.desc}</p>
-              <button className="border border-blue-500 text-blue-500 rounded-lg py-1 text-sm font-medium hover:bg-blue-500 hover:text-white transition">
+              <button className="border border-red-500 text-red-500 rounded-lg py-1 text-sm font-medium hover:bg-red-500 hover:text-white transition">
                 SEE DETAIL
               </button>
             </div>

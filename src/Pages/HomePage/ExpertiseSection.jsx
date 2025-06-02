@@ -1,10 +1,10 @@
 import { FaCamera, FaPlayCircle, FaEnvelope, FaStar, FaWifi, FaSnowflake, FaThumbtack, FaCheckCircle, FaEye, FaEdit, FaLightbulb } from 'react-icons/fa';
 
 const iconsLeft = [
-    { icon: <FaCamera />, color: 'bg-blue-500' },
-    { icon: <FaPlayCircle />, color: 'bg-blue-400' },
+    { icon: <FaCamera />, color: 'bg-red-500' },
+    { icon: <FaPlayCircle />, color: 'bg-red-300' },
     { icon: <FaEnvelope />, color: 'bg-purple-500' },
-    { icon: <FaStar />, color: 'bg-blue-300' },
+    { icon: <FaStar />, color: 'bg-red-200' },
     { icon: <FaWifi />, color: 'bg-teal-400' },
     { icon: <FaSnowflake />, color: 'bg-purple-300' },
     { icon: <FaThumbtack />, color: 'bg-purple-700' },
@@ -12,7 +12,7 @@ const iconsLeft = [
 
 const features = [
     {
-        icon: <FaCheckCircle className="text-blue-500" />,
+        icon: <FaCheckCircle className="text-red-500" />,
         title: 'Nulla lobortis nunc',
         desc: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
     },
@@ -39,15 +39,15 @@ const ExpertiseSection = () => {
             {/* Left section */}
             <div className="relative w-full max-w-xs sm:max-w-sm lg:w-[320px] lg:h-[320px] flex items-center justify-center">
                 {/* Mobile view - Only text */}
-                <div className="block lg:hidden text-center text-blue-500 font-bold text-2xl sm:text-3xl">
+                <div className="block lg:hidden text-center text-red-500 font-bold text-2xl sm:text-3xl">
                     Our Expertise
                 </div>
 
                 {/* Desktop view - Rotated diamond with icons */}
                 <div className="hidden lg:block relative w-[320px] h-[320px]">
                     <div className="absolute inset-0 border-2 border-blue-200 rotate-45 rounded-xl"></div>
-                    <div className="absolute inset-6 border-2 border-blue-300 rotate-45 rounded-xl"></div>
-                    <div className="absolute inset-12 bg-blue-500 rotate-45 rounded-xl flex items-center justify-center">
+                    <div className="absolute inset-6 border-2 border-red-200 rotate-45 rounded-xl"></div>
+                    <div className="absolute inset-12 bg-red-500 rotate-45 rounded-xl flex items-center justify-center">
                         <span className="text-white text-xl font-bold rotate-[-45deg]">Our Expertise</span>
                     </div>
                     {iconsLeft.map((item, i) => (
@@ -98,10 +98,10 @@ export default ExpertiseSection;
 // import { FaCamera, FaPlayCircle, FaEnvelope, FaStar, FaWifi, FaSnowflake, FaThumbtack, FaCheckCircle, FaEye, FaEdit, FaLightbulb } from 'react-icons/fa';
 
 // const iconsLeft = [
-//     { icon: <FaCamera />, color: 'bg-blue-500' },
-//     { icon: <FaPlayCircle />, color: 'bg-blue-400' },
+//     { icon: <FaCamera />, color: 'bg-red-500' },
+//     { icon: <FaPlayCircle />, color: 'bg-red-300' },
 //     { icon: <FaEnvelope />, color: 'bg-purple-500' },
-//     { icon: <FaStar />, color: 'bg-blue-300' },
+//     { icon: <FaStar />, color: 'bg-red-200' },
 //     { icon: <FaWifi />, color: 'bg-teal-400' },
 //     { icon: <FaSnowflake />, color: 'bg-purple-300' },
 //     { icon: <FaThumbtack />, color: 'bg-purple-700' },
@@ -109,7 +109,7 @@ export default ExpertiseSection;
 
 // const features = [
 //     {
-//         icon: <FaCheckCircle className="text-blue-500" />,
+//         icon: <FaCheckCircle className="text-red-500" />,
 //         title: 'Nulla lobortis nunc',
 //         desc: 'Interdum et malesuada fames ac ante ipsum primis in faucibus.',
 //     },
@@ -137,8 +137,8 @@ export default ExpertiseSection;
 //             <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] flex items-center justify-center">
 //                 {/* Background diamonds */}
 //                 <div className="absolute w-full h-full border-2 border-blue-200 rotate-45 rounded-xl"></div>
-//                 <div className="absolute w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] border-2 border-blue-300 rotate-45 rounded-xl"></div>
-//                 <div className="absolute w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] bg-blue-500 rotate-45 rounded-xl flex items-center justify-center">
+//                 <div className="absolute w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] border-2 border-red-200 rotate-45 rounded-xl"></div>
+//                 <div className="absolute w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] bg-red-500 rotate-45 rounded-xl flex items-center justify-center">
 //                     <span className="text-white text-sm sm:text-xl font-bold rotate-[-45deg]">Our Expertise</span>
 //                 </div>
 //                 {/* Floating icons */}

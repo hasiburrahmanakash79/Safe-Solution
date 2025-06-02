@@ -34,7 +34,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 {/* Title Section */}
                 <div className="text-center md:text-left">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-500">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500">
                         About Us
                     </h1>
                 </div>

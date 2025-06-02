@@ -126,7 +126,7 @@ const ContactPage = () => {
             />
             <span>
               I have read and accept the Terms of{" "}
-              <a href="#" className="text-blue-600 underline">
+              <a href="#" className="text-red-500 underline">
                 Service & Privacy Policy *
               </a>
             </span>

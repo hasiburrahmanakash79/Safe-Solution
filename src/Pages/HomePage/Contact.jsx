@@ -14,7 +14,7 @@ const Contact = () => {
       <div>
         <Link
           to="/contact"
-          className="inline-block mt-4 lg:mt-0 py-3 px-6 bg-white text-red-500 rounded-2xl font-semibold hover:bg-red-100 transition"
+          className="inline-block mt-4 lg:mt-0 py-3 px-6 bg-white text-red-500 rounded-2xl font-semibold hover:bg-red-100 transition text-nowrap"
         >
           Contact Us
         </Link>
