@@ -36,11 +36,11 @@ export default function Navbar() {
         }`}
       >
         {/* Logo and Tagline */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-5">
           <img
             src="https://images.seeklogo.com/logo-png/48/2/scuba-scholl-international-logo-png_seeklogo-483233.png"
             alt="Safe solution International"
-            className="w-10 h-10"
+            className="w-16"
           />
           <div>
             <h1 className="text-lg font-semibold">
