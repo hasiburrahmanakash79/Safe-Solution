@@ -62,11 +62,15 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-gray-400 text-sm">
-                {["Shipping & Returns", "Privacy Policy", "Terms of Service"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="hover:text-red-500 transition">{item}</a>
-                  </li>
-                ))}
+                <li>
+                  <a href="#" className="hover:text-red-500 transition">Shipping & Returns</a>
+                </li>
+                <li>
+                  <a href="/policy" className="hover:text-red-500 transition">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms_condition" className="hover:text-red-500 transition">Terms of Service</a>
+                </li>
               </ul>
             </div>
           </div>

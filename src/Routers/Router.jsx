@@ -9,6 +9,8 @@ import Blog from "../Pages/Blog/Blog";
 import BlogDetails from "../Pages/Blog/BlogDetails";
 import ContactPage from "../Pages/ContactPage/ContactPage";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+import TermsConditions from "../Pages/TermsConditions/TermsConditions";
+import PrivacyPolicy from "../Pages/TermsConditions/PrivacyPolicy";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,6 +52,15 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <ContactPage />,
       },
+      {
+        path: "/terms_condition",
+        element: <TermsConditions />,
+      },
+      {
+        path: "/policy",
+        element: <PrivacyPolicy />,
+      },
+
     ],
   },
 ]);

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -55,7 +56,8 @@ const ContactPage = () => {
     <div className="min-h-screen bg-white px-4 py-16 flex flex-col items-center  max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-4">Say Hello to Us</h2>
       <p className="text-center max-w-xl mb-12 text-gray-700">
-        Do you have any questions? Are you ready to reduce cost and create new revenue? Or you simply want to say hi? Drop us a message.
+        Do you have any questions? Are you ready to reduce cost and create new
+        revenue? Or you simply want to say hi? Drop us a message.
       </p>
 
       <form
@@ -77,7 +79,9 @@ const ContactPage = () => {
               onChange={handleChange}
               placeholder=" "
               className={`peer w-full border-b-2 py-2 text-gray-700 placeholder-transparent focus:outline-none ${
-                errors[field.name] ? "border-red-500" : "border-gray-300 focus:border-red-500"
+                errors[field.name]
+                  ? "border-red-500"
+                  : "border-gray-300 focus:border-red-500"
               }`}
             />
             <label
@@ -102,7 +106,9 @@ const ContactPage = () => {
             onChange={handleChange}
             placeholder=" "
             className={`peer w-full border-b-2 py-2 text-gray-700 placeholder-transparent focus:outline-none ${
-              errors.message ? "border-red-500" : "border-gray-300 focus:border-red-500"
+              errors.message
+                ? "border-red-500"
+                : "border-gray-300 focus:border-red-500"
             }`}
           ></textarea>
           <label
@@ -111,7 +117,9 @@ const ContactPage = () => {
           >
             Write your message here
           </label>
-          {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+          {errors.message && (
+            <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+          )}
         </div>
 
         {/* Checkbox and Submit */}
@@ -125,13 +133,21 @@ const ContactPage = () => {
               className="mt-1"
             />
             <span>
-              I have read and accept the Terms of{" "}
-              <a href="#" className="text-red-500 underline">
-                Service & Privacy Policy *
-              </a>
+              I have read and accept the{" "}
+              <Link to="/terms_condition" className="text-red-500 underline">
+                Terms of Service{" "}
+              </Link>{" "}
+              <span className="px-1">
+                &
+              </span>
+              <Link to="/policy" className="text-red-500 underline">
+                Privacy Policy
+              </Link>
             </span>
           </label>
-          {errors.terms && <p className="text-red-500 text-sm mt-1">{errors.terms}</p>}
+          {errors.terms && (
+            <p className="text-red-500 text-sm mt-1">{errors.terms}</p>
+          )}
 
           <button
             type="submit"
